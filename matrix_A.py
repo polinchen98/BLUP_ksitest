@@ -32,6 +32,3 @@ pedigree = {1: [None, None],
                5: [4, 3],
                6: [5, 2]}
 matrix_A = (get_numerator_relationship_matrix(pedigree))
-
-
-
