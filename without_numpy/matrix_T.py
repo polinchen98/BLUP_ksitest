@@ -4,8 +4,8 @@ def get_lower_triangular_matrix(pedigree):
 
     for i in range(1, len(T)):
         for j in range(1, i + 1):
-            sire = pedigree[i][0]
-            dam = pedigree[i][1]
+            sire = pedigree[i]['sire']
+            dam = pedigree[i]['dam']
             if i == j:
                 T[i][i] = 1
             elif sire is not None and dam is not None:

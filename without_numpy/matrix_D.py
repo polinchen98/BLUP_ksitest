@@ -7,8 +7,8 @@ def get_diagonal_matrix(pedigree):
 
     for i in range(1, len(D)):
         for j in range(1, i+i):
-            sire = pedigree[i][0]
-            dam = pedigree[i][1]
+            sire = pedigree[i]['sire']
+            dam = pedigree[i]['dam']
             if sire is not None and dam is not None:
                 F_s = matrix_A[sire][sire] - 1
                 F_d = matrix_A[dam][dam] - 1
@@ -34,8 +34,8 @@ def get_inversion_D_ignore_inbreeding(pedigree):
     D_inv = [[0 for row in range(len(pedigree)+1)] for col in range(len(pedigree)+1)]
     for i in range(1, len(D_inv)):
         for j in range(1, i+i):
-            sire = pedigree[i][0]
-            dam = pedigree[i][1]
+            sire = pedigree[i]['sire']
+            dam = pedigree[i]['dam']
             if sire is not None and dam is not None:
                 D_inv[i][i] = 2
             elif sire is not None and dam is None:

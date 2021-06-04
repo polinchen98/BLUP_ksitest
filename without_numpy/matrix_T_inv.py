@@ -15,8 +15,8 @@ def get_inversion_matrix_T(pedigree):
     # for matrix M
     for i in range(1, len(matrix_M)):
         for j in range(1, i+1):
-            sire = pedigree[i][0]
-            dam = pedigree[i][1]
+            sire = pedigree[i]['sire']
+            dam = pedigree[i]['dam']
             if sire is not None and dam is not None:
                 matrix_M[i][sire] = 0.5
                 matrix_M[i][dam] = 0.5

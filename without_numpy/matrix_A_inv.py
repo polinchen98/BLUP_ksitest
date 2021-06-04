@@ -19,8 +19,8 @@ def get_inversion_matrix_A_ignore_inbreeding(pedigree):
 
     for i in range(1, len(A_inv)):
 
-        sire = pedigree[i][0]
-        dam = pedigree[i][1]
+        sire = pedigree[i]['sire']
+        dam = pedigree[i]['dam']
 
         if sire is not None and dam is not None:
             A_inv[i][i] += D_inv[i][i]
@@ -47,12 +47,3 @@ def get_inversion_matrix_A_ignore_inbreeding(pedigree):
 
     return A_inv
 
-
-pedigree = {1: [None, None],
-               2: [None, None],
-               3: [1, 2],
-               4: [1, None],
-               5: [4, 3],
-               6: [5, 2]}
-matrix_A = (get_inversion_matrix_A_ignore_inbreeding(pedigree))
-print(matrix_A)

@@ -9,8 +9,8 @@ def get_inversion_matrix_A_accounted_inbreeding(pedigree):
     # for matrix L
     for i in range(1, len(L)):
         for j in range(1, i + i):
-            sire = pedigree[i][0]
-            dam = pedigree[i][1]
+            sire = pedigree[i]['sire']
+            dam = pedigree[i]['dam']
 
             if i == j:
 
@@ -46,8 +46,8 @@ def get_inversion_matrix_A_accounted_inbreeding(pedigree):
 
     for i in range(1, len(A_inv)):
 
-        sire = pedigree[i][0]
-        dam = pedigree[i][1]
+        sire = pedigree[i]['sire']
+        dam = pedigree[i]['dam']
         diagonal_element = D_inv[i][i]
 
         if sire is not None and dam is not None:

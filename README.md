@@ -2,20 +2,18 @@
 
 `example_1` - directory with some tasks from the first charter of the book.
 
-`multiplication_matrix.py` - the file contains a function that performs matrix multiplication.
+`without_numpy` - directory for my training without numpy
 
-`transponse_matrix.py` - the file contains a function that performs matrix transpose.
+`matrix_A_np.py` - the file contains a function that creates numerator relationship matrix.
 
-`matrix_A.py` - the file contains a function that creates numerator relationship matrix.
+`matrix_A_inv_np.py` - the file contains a function that creates inverse matrix A.
 
-`matrix_A_inv.py` - the file contains a function that creates inverse matrix A.
+`matrix_T_np.py` - the file contains a function that creates a lower triangular matrix.
 
-`inbreeding_accounted.py` - the file contains a function that inverse of the numerator relationship matrix accounting for inbreeding.
+`matrix_T_inv_np.py` - the file contains a function that creates inverse matrix T.
 
-`matrix_T.py` - the file contains a function that creates a lower triangular matrix.
+`matrix_D_np.py` - the file contains a function that creates diagonal matrix.
 
-`matrix_T_inv.py` - the file contains a function that creates inverse matrix T.
+`mixed_model_equations.py` - the file contains a function that find solution for mixed model equation.
 
-`matrix_D.py` - the file contains a function that creates diagonal matrix.
-
-
+`test.py` - script that runs the example from the book. The answer is the same:)
